@@ -1,26 +1,20 @@
 import React from 'react';
 import './App.css';
+import {CarType, NewComponent} from "./NewComponent";
 
 function App() {
+    const topCars: CarType[] = [
+        {manufacturer: 'BMW', model: 'm5cs'},
+        {manufacturer: 'Mercedes', model: 'e63s'},
+        {manufacturer: 'Audi', model: 'rs6'},
+        {manufacturer: 'Renault', model: 'w7mf'},
+        {manufacturer: 'Honda', model: 'n9j'},
+        {manufacturer: 'Opel', model: 'c7t'}
+    ]
+
     return (
-        <div className="App">
-            <div>
-                <h3>What to learn</h3>
-                <div>
-                    <input/>
-                    <button>+</button>
-                </div>
-                <ul>
-                    <li><input type="checkbox" checked={true}/> <span>HTML&CSS</span></li>
-                    <li><input type="checkbox" checked={true}/> <span>JS</span></li>
-                    <li><input type="checkbox" checked={false}/> <span>React</span></li>
-                </ul>
-                <div>
-                    <button>All</button>
-                    <button>Active</button>
-                    <button>Completed</button>
-                </div>
-            </div>
+        <div>
+            <NewComponent cars={topCars}/>
         </div>
     );
 }
