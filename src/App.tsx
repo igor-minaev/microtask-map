@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import {NewComponent} from './NewComponent';
+import {CarsComponent} from './CarsComponent';
 
 function App() {
     const [students, setStudents] = useState([
@@ -17,8 +18,17 @@ function App() {
             {id: 11, name: "Christopher", age: 100},
         ]
     )
+    const topCars = [
+        {manufacturer:'BMW', model:'m5cs'},
+        {manufacturer:'Mercedes', model:'e63s'},
+        {manufacturer:'Audi', model:'rs6'}
+    ]
+
     return (
+        <>
         <NewComponent students={students}/>
+        <CarsComponent cars={topCars}/>
+        </>
     );
 }
 
